@@ -5,7 +5,7 @@ import propTypes from 'prop-types'
 
 
 
-export const Button = (props) => {
+const Button = (props) => {
   const className = [props.className];
   if (props.isPrimary) className.push("btn-primary")
   if (props.isLarge) className.push("btn-lg")
@@ -69,6 +69,8 @@ export const Button = (props) => {
     </button>
   )
 }
+
+export default Button;
 
 Button.propTypes = {
   type: propTypes.oneOf(["button", "link"]),
